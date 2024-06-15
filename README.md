@@ -5,7 +5,7 @@ Since "Pojo" stands for "Plain Ol' Javascript Object", a PojoTree would be a tre
 whose branches are Pojos. JSON files are PojoTrees. Anything constructed from
 object literals {} is a PojoTree.
 
-Anything without 'Object' as its constructor is NOT a Pojo, and is instead
+Anything without 'Object' as its constructor is *not* a Pojo, and is instead
 treated as a leaf. This includes:
 
 - numbers
