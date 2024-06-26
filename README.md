@@ -34,7 +34,7 @@ const mappedTree = mapTree(transform, tree)
 If multiple arguments are passed to mapTree, they are passed to the transforming
 function following the PojoTree structure of the first argument.
 
-```
+```javascript
 const mappedTrees = mapTree(transform, ...trees)
 // returns {
 //      a: transform(trees[0].a, trees[1].a)
@@ -47,7 +47,7 @@ The returned PojoTree will only follow the structure of the first argument.
 Where leaves in latter arguments correspond to branches in the first
 argument, those leaves will be distributed.
 
-```
+```javascript
 const mappedTreeAndLeaf = mapTree(transform, tree, leaf)
 // returns {
 //      a: transform(tree.a, leaf),
@@ -59,7 +59,7 @@ const mappedTreeAndLeaf = mapTree(transform, tree, leaf)
 The function doTree calls a tree of functions. The result is a tree whose leaves
 are the return value of calling the function tree's leaves on the arguments' leaves.
 
-```
+```javascript
 const done = doTree(funcTree, arg)
 // returns {
 //      a: funcTree.a(arg.a),
@@ -70,7 +70,7 @@ const done = doTree(funcTree, arg)
 
 This climbTree generator yields leaves, while climbTrees yields arrays of leaves
 
-```
+```javascript
 for(const leaf of climbTree(tree))
 // yields tree.a, tree.b, tree.c
 
