@@ -22,7 +22,7 @@ treated as a leaf. This includes:
 
 # Examples
 
-```
+```javascript
 const mappedTree = mapTree(transform, tree)
 // returns {
 //      a: transform(tree.a),
