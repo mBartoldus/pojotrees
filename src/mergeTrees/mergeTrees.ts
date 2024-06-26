@@ -4,7 +4,7 @@ import { gatherBranches } from '../branches/branches.ts'
 export function mergeTrees(
     merger: (leafA: any, leafB: any) => any,
     ...trees: any[]
-) {
+): any {
     if (trees.length === 1) return trees[0]
     if (!containsPojos(trees)) return trees.reduce(merger)
 
@@ -20,8 +20,8 @@ export function mergeTrees(
     return merged
 }
 
-export const overlayTrees = (...trees: any[]) =>
+export const overlayTrees = (...trees: any[]): any =>
     mergeTrees((_a, b) => b, ...trees)
 
-export const treeProduct = (...factors: any[]) =>
+export const treeProduct = (...factors: any[]): any =>
     mergeTrees((a, b) => a * b, ...factors)

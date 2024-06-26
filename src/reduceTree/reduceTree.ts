@@ -14,6 +14,6 @@ function _(initial: any, reducer: TreeReducer, tree: PojoTree, keys: string[]) {
     return acc
 }
 
-export function reduceTree(initial: any, reducer: TreeReducer, tree: PojoTree) {
+export function reduceTree(initial: any, reducer: TreeReducer, tree: PojoTree): any {
     return _(initial, reducer, tree, [])
 }
