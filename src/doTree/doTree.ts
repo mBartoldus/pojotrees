@@ -31,7 +31,6 @@ const callFirstArg = (fn: Function, ...args: any[]) => {
  *  doTree(funcTree, x, y)
  * 
 */
-
 export function doTree(funcTree: PojoTree<Function>, ...args: any[]): PojoTree {
     return mapTree(callFirstArg, funcTree, ...args)
 }

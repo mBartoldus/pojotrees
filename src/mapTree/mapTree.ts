@@ -2,13 +2,10 @@ import { PojoTree } from '../PojoTree/PojoTree.ts'
 import { isPojo } from '../PojoTree/isPojo.ts'
 import { tryBranches } from '../branches/branches.ts'
 
-/*
-    mapTree
-    maps following the leaves of the first tree given
-    passing similarly-keyed nodes as arguments to given transform
-    see: 'pluckBranches' for further detail
-*/
-
+/**
+ * Maps the leaves of the first argument,
+ * passing similarly-keyed leaves and branches from following arguments to the given transform function.
+ */
 export function mapTree(transform: Function, ...trees: any[]): any {
     if (!isPojo(trees[0])) return transform(...trees)
     const mapped: PojoTree = {}
