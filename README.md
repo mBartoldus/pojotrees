@@ -1,3 +1,5 @@
+[![JSR](https://jsr.io/badges/@mbartoldus/pojotrees)](https://jsr.io/@mbartoldus/pojotrees)
+
 # About
 
 This library provides functions and generators for mapping and iterating nested objects.
